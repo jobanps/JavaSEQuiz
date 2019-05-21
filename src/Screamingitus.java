@@ -9,20 +9,23 @@ public class Screamingitus {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter number of weeks to know infection rate for ");
 		int numberOfWeeks = input.nextInt();
-		int numberOfDays = numberOfWeeks * 7;
 		int infectedCount = 0;
 		
-		for(int i = 1 ; i <= numberOfWeeks ; i++) {
+		for(int week = 1 ; week <= numberOfWeeks ; week++) {
 			
-			if(i == 1) {
+			if(week == 1) {
 				infectedCount = 1 + 30 ;	// Day 1 + remainingDays * 5
-			}
-			else {
-				infectedCount = infectedCount + 35; // infected + numbers_of_Days_In_a_Week * 5 (current week)
+			
+			} else if(week == 2) {
+				infectedCount = infectedCount + 5 + 48; // total + infected for 8 day + 6 * 5 (remaining week)
+				
+			} else {
+				infectedCount = infectedCount + 56; // infected + numbers_of_Days_In_a_Week * 5 (current week)
+			
 			}
 			
-	
-			System.out.println("Number of instructors infected after week '" + i + "' : " + infectedCount);
+			System.out.println("Number of instructors infected after week '" + week + "' : " + infectedCount);
+		
 		}
 			
 		System.out.println("\nTotal Number of instructors infected after '" + numberOfWeeks +"' weeks  : " + infectedCount);
