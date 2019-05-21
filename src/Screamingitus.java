@@ -19,9 +19,11 @@ public class Screamingitus {
 			} else if(week == 2) {
 				infectedCount = infectedCount + 5 + 48; // total + infected for 8 day + 6 * 5 (remaining week)
 				
-			} else {
-				infectedCount = infectedCount + 56; // infected + numbers_of_Days_In_a_Week * 5 (current week)
+			} else if (week % 2 == 0){
+				infectedCount = infectedCount + 4*8; // in even week we have 4 even days
 			
+			} else {
+				infectedCount = infectedCount + 3*8; // in odd week we have 3 even days
 			}
 			
 			System.out.println("Number of instructors infected after week '" + week + "' : " + infectedCount);
