@@ -12,9 +12,6 @@ public class Screamingitus {
 		int numberOfDays = numberOfWeeks * 7;
 		int infectedCount = 0;
 		
-		//Day 1 (1) + remaining days * rate(5)
-		infectedCount = 1 + (numberOfDays - 1) * 5;
-		
 		for(int i = 1 ; i <= numberOfWeeks ; i++) {
 			
 			if(i == 1) {
@@ -28,7 +25,7 @@ public class Screamingitus {
 			System.out.println("Number of instructors infected after week '" + i + "' : " + infectedCount);
 		}
 			
-		System.out.println("\nTotal Number of instructors infected after '" + numberOfWeeks +"' of weeks  : " + infectedCount);
+		System.out.println("\nTotal Number of instructors infected after '" + numberOfWeeks +"' weeks  : " + infectedCount);
 		
 		input.close();
 		
