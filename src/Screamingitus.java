@@ -17,7 +17,7 @@ public class Screamingitus {
 				infectedCount = 1 + 30 ;	// Day 1 + remainingDays * 5
 			
 			} else if(week == 2) {
-				infectedCount = infectedCount + 5 + 48; // total + infected for 8 day + 6 * 5 (remaining week)
+				infectedCount = infectedCount + 5 + 3*8; // 3 even day in weeks except Day 8
 				
 			} else if (week % 2 == 0){
 				infectedCount = infectedCount + 4*8; // in even week we have 4 even days
